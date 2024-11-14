@@ -13,6 +13,10 @@ const simpleStyles = {
         "& .MuiBackdrop-root": {
             display: "none"
         }
+    },
+    drawerPaper: {
+        width: drawerWidth,
+        backgroundColor: "rgba(120, 120, 120, 0.2)"
     }
 }
 
@@ -27,7 +31,7 @@ export default function NavDrawer() {
                       </Typography>
                   </Toolbar>
               </AppBar>
-              <Drawer variant="temporary" open={true} sx={simpleStyles.drawer}>
+              <Drawer variant="temporary" open={true} sx={simpleStyles.drawer} PaperProps={simpleStyles.drawerPaper}>
                   <List>
                       {[{text: "Input Form", route: "/form"}, {
                           text: "Contact card Grid", route: "/grid"}, {
